@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AnimatedIconMaui.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vms="clr-namespace:AnimatedIconMaui.ViewModels"
+    xmlns:customControls="clr-namespace:AnimatedIconMaui.CustomControls"
+    BackgroundColor="#222222"
+    x:DataType="vms:MainViewModel">
+
+    <Grid
+        HorizontalOptions="CenterAndExpand"
+        RowDefinitions="Auto,Auto"
+        RowSpacing="15"
+        VerticalOptions="CenterAndExpand">
+        <customControls:AnimDownloadButton
+            Grid.Row="1"
+            BackColor="#333333"
+            ForeColor="#23F0C1"
+            DownloadedColor="LawnGreen"
+            CornerRadius="50"
+            ClickedCommand="{Binding DownloadCommand}"
+            IsDownloading="{Binding IsDownloading}"
+            Downloaded="{Binding Downloaded}"
+            HeightRequest="300"
+            WidthRequest="300" />
+    </Grid>
+</ContentPage>
